@@ -67,7 +67,6 @@ CONFIG_PACKAGE_luci-nginx=y
 CONFIG_PACKAGE_luci-compat=y
 
 ### APPLICATION ###
-CONFIG_PACKAGE_luci-app-oled=y
 CONFIG_PACKAGE_luci-app-wireguard=y
 CONFIG_PACKAGE_luci-app-socat=y
 CONFIG_PACKAGE_luci-app-argon-config=y
