@@ -26,16 +26,7 @@ jobs:
         fi
     - name: Checkout
       uses: actions/checkout@main
-    - name: Show system
-      run: |
-        echo -e "Total CPU cores\t: $(nproc)"
-        cat /proc/cpuinfo | grep 'model name'
-        free -h
-        uname -a
-        [ -f /proc/version ] && cat /proc/version
-        [ -f /etc/issue.net ] && cat /etc/issue.net
-        [ -f /etc/issue ] && cat /etc/issue
-        ulimit -a
+
     - name: Free disk space
       run: |
         sudo -E swapoff -a
@@ -62,7 +53,7 @@ jobs:
         df -h
     - name: Prepare Mixedwrt
       run: |
-        sudo chown -R runner:runner /home/runner/work/YAOF
+        sudo chown -R runner:runner /home/runner/work/YAOF1
         cp -r ./SCRIPTS/R2S/. ./SCRIPTS/
         cp -r ./SCRIPTS/. ./
         /bin/bash 01_get_ready.sh
